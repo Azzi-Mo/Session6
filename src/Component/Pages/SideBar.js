@@ -10,7 +10,10 @@ function SideBar()
                     <Link to='/Products' >
                        All products
                     </Link>
-                    <Link to='/Gategories'>All Gategories</Link>
+                </ul>
+                <ul>
+                <Link to='/Gategories'>All Gategories</Link>
+
                 </ul>
 
             </section>         

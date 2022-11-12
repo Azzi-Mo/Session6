@@ -3,6 +3,7 @@ import Nav from "./Nav"
 import Gategories from './Pages/Gategories'
 import Products from './Pages/products'
 import SideBar from "./Pages/SideBar"
+import AddProduct from './Pages/AddProduct'
 function App()
 {
     return (
@@ -23,6 +24,7 @@ function App()
              <Routes>
                 <Route path='/Products' element={ <Products/> }/>
                 <Route path='/Gategories' element={ <Gategories/> }/>
+                <Route path='AddProduct' element={<AddProduct/>}>  </Route>
              </Routes>
 
 
