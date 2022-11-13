@@ -24,7 +24,7 @@ function Nav() {
           <ul className="navbar-nav">
             <li className="nav-item active">
               <a className="nav-link" href="/#">
-                Home <span className="sr-only">(current)</span>
+                Home 
               </a>
             </li>
           </ul>
