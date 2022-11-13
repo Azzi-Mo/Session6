@@ -4,6 +4,7 @@ import Gategories from './Pages/Gategories'
 import Products from './Pages/products'
 import SideBar from "./Pages/SideBar"
 import AddProduct from './Pages/AddProduct'
+import ProductDetails from './Pages/ProductDetails'
 function App()
 {
     return (
@@ -22,9 +23,11 @@ function App()
            <div className="sec_products col-10">
            
              <Routes>
-                <Route path='/Products' element={ <Products/> }/>
-                <Route path='/Gategories' element={ <Gategories/> }/>
+                <Route path='Products' element={ <Products/> }/>
+                <Route path='Gategories' element={ <Gategories/> }/>
                 <Route path='AddProduct' element={<AddProduct/>}>  </Route>
+                <Route path='Products/:ProductsID' element={<ProductDetails/>}>  </Route>
+
              </Routes>
 
 

@@ -7,12 +7,12 @@ function SideBar()
          
             <section className="Side_bar">
                 <ul>
-                    <Link to='/Products' >
+                    <Link to='Products' >
                        All products
                     </Link>
                 </ul>
                 <ul>
-                <Link to='/Gategories'>All Gategories</Link>
+                <Link to='Gategories'>All Gategories</Link>
 
                 </ul>
 
