@@ -1,6 +1,8 @@
+import {Routes , Route} from 'react-router-dom'
 import Nav from "./Nav"
+import Gategories from './Pages/Gategories'
+import Products from './Pages/products'
 import SideBar from "./Pages/SideBar"
-import 
 function App()
 {
     return (
@@ -16,7 +18,15 @@ function App()
            
            <SideBar/>
             </div>
-           <div className="sec_products col-10">test2</div>
+           <div className="sec_products col-10">
+           
+             <Routes>
+                <Route path='/Products' element={ <Products/> }/>
+                <Route path='/Gategories' element={ <Gategories/> }/>
+             </Routes>
+
+
+            </div>
 
           </section>
          
