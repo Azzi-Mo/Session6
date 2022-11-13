@@ -3,21 +3,19 @@ import { Link } from "react-router-dom";
 
 function Products() {
   const [Products, setProducts] = useState([]);
-  useEffect(() => {
+  const GetAllProd = () => {
     fetch("http://localhost:9000/products")
       .then((res) => res.json())
-      .then((data) => {
-        setProducts(data);
-        // console.log(data);
-      });
+      .then((data) => setProducts(data));
+  };
+  useEffect(() => {
+    GetAllProd();
   }, []);
 
   const deProductID = (PID) => {
     fetch(`http://localhost:9000/products/${PID}`, { method: "delete" })
       .then((res) => res.json())
-      .then((data) =>  console.log(data)
-      
-      );
+      .then((data) => GetAllProd());
   };
   return (
     <>
