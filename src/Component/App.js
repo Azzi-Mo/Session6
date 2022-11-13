@@ -16,7 +16,7 @@ function App()
           <Nav/>
           <section className="row">
 
-           <div className="sec_sideBar col-2"> 
+           <div className="sec_sideBar col-2" style={{'background':'#F8F9FA'}}> 
            
            <SideBar/>
             </div>

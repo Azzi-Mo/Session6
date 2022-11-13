@@ -11,6 +11,14 @@ function Products() {
         // console.log(data);
       });
   }, []);
+
+  const deProductID = (PID) => {
+    fetch(`http://localhost:9000/products/${PID}`, { method: "delete" })
+      .then((res) => res.json())
+      .then((data) =>  console.log(data)
+      
+      );
+  };
   return (
     <>
       <h5>products page</h5>
@@ -21,7 +29,7 @@ function Products() {
       <table className="table table-striped">
         <thead className="thead-dark">
           <tr>
-            <th scope="col">ID</th> 
+            <th scope="col">ID</th>
             <th scope="col-5">Title</th>
             <th scope="col">Price</th>
             <th scope="col-2">operation</th>
@@ -36,9 +44,21 @@ function Products() {
                   <td>{prod.title}</td>
                   <td>{prod.price}</td>
                   <td>
-                    <button className="btn btn-danger btn-sm">delete</button>
+                    <button
+                      className="btn btn-danger btn-sm"
+                      onClick={() => {
+                        deProductID(prod.id);
+                      }}
+                    >
+                      delete
+                    </button>
                     <button className="btn btn-success btn-sm">edite</button>
-                    <Link to={`/products/${prod.id}`} className="btn btn-primary btn-sm">view</Link>
+                    <Link
+                      to={`/products/${prod.id}`}
+                      className="btn btn-primary btn-sm"
+                    >
+                      view
+                    </Link>
                   </td>
                 </tr>
               </>

@@ -5,7 +5,7 @@ function SideBar()
 
         <>
          
-            <section className="Side_bar">
+            <section className="Side_bar" style={{'background':'#F8F9FA'}}>
                 <ul>
                     <Link to='Products' >
                        All products
